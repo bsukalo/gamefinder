@@ -4,10 +4,14 @@ import {
 	BreadcrumbLink,
 	Text,
 } from "@chakra-ui/react";
+import ColorModeSwitch from "./ColorModeSwitch";
 
 const Navbar = () => {
 	return (
-		<Breadcrumb separator={""}>
+		<Breadcrumb
+			separator={""}
+			sx={{ ol: { justifyContent: "space-between", padding: "10px" } }}
+		>
 			<BreadcrumbItem>
 				<BreadcrumbLink href="#">
 					<Text as="b" letterSpacing={"1px"} fontSize={"18px"}>
@@ -21,7 +25,7 @@ const Navbar = () => {
 			</BreadcrumbItem>
 
 			<BreadcrumbItem>
-				<Text>Dark mode/Light mode</Text>
+				<ColorModeSwitch></ColorModeSwitch>
 			</BreadcrumbItem>
 		</Breadcrumb>
 	);
