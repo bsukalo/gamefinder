@@ -2,8 +2,10 @@ import {
 	Breadcrumb,
 	BreadcrumbItem,
 	BreadcrumbLink,
+	Image,
 	Text,
 } from "@chakra-ui/react";
+import logo from "../assets/gamefinder.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 
 const Navbar = () => {
@@ -14,9 +16,7 @@ const Navbar = () => {
 		>
 			<BreadcrumbItem>
 				<BreadcrumbLink href="#">
-					<Text as="b" letterSpacing={"1px"} fontSize={"18px"}>
-						gamefinder
-					</Text>
+					<Image src={logo} maxWidth={"180px"} />
 				</BreadcrumbLink>
 			</BreadcrumbItem>
 
