@@ -4,7 +4,7 @@ const ColorModeSwitch = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	return (
-		<Button onClick={toggleColorMode} size="sm">
+		<Button onClick={toggleColorMode} size="sm" minWidth={"80px"}>
 			{colorMode === "light" ? "Dark" : "Light"} mode
 		</Button>
 	);
