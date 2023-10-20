@@ -4,7 +4,11 @@ import darkLogo from "../assets/logo-dark.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
-const Navbar = () => {
+interface Props {
+	onSearch: (searchText: string) => void;
+}
+
+const Navbar = ({ onSearch }: Props) => {
 	const theme = useColorModeValue("light", "dark");
 
 	return (
@@ -15,7 +19,7 @@ const Navbar = () => {
 				<Image src={darkLogo} maxWidth={"180px"} />
 			)}
 
-			<SearchInput />
+			<SearchInput onSearch={onSearch} />
 			<ColorModeSwitch />
 		</HStack>
 	);
